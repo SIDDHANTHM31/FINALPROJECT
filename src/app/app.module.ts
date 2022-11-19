@@ -5,18 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SqaureComponent } from './sqaure/sqaure.component';
 import { BoardComponent } from './board/board.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PlayersComponent } from './players/players.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     SqaureComponent,
-    BoardComponent
+    BoardComponent,
+    PlayersComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

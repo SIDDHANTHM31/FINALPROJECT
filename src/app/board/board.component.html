@@ -1,13 +1,15 @@
-<h1>Current Player: {{ player }}</h1>
+<body style="background-color: white">
+  <h1>Current Player: {{ player }}</h1>
 
-<button nbButton outline status="danger" (click)="newGame()">
-  Start new Game
-</button>
+  <button nbButton outline status="danger" (click)="newGame()">
+    Start new Game
+  </button>
 
-<h2 *ngIf="winner">Player {{ winner }} won the game!</h2>
+  <h2 *ngIf="winner">Player {{ winner }} won the game!</h2>
 
-<main class="game-board">
-  <div *ngFor="let val of squares; let i = index">
-    <app-sqaure [value]="val" (click)="makeMove(i)"> </app-sqaure>
-  </div>
-</main>
+  <main class="game-board">
+    <div *ngFor="let val of squares; let i = index">
+      <app-sqaure [value]="val" (click)="makeMove(i)"> </app-sqaure>
+    </div>
+  </main>
+</body>

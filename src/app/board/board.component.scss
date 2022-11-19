@@ -1,5 +1,33 @@
+// .game-board {
+//   display: grid;
+//   margin: 50px;
+//   grid-template-columns: 200px 200px 200px;
+//   grid-template-rows: 200px 200px 200px;
+//   padding: 10px;
+//   // grid-template-columns: repeat(3, 1fr);
+//   justify-content: space-evenly;
+//   background-color: aqua;
+// }
 .game-board {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #34495e;
+  color: #fff;
+  border: 6px solid #2c3e50;
+  border-radius: 10px;
+
   display: grid;
-  gap: 0px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.box {
+  border: 6px solid #2c3e50;
+  border-radius: 2px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
